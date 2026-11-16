@@ -1477,131 +1477,216 @@ img {
    EXPERIENCE
 =================================== */
 
-.timeline {
 
-    max-width: 800px;
-
-    margin: auto;
-
-    position: relative;
-
+.experience {
+    padding: 100px 0;
+    background: var(--bg-color);
 }
 
 
-.timeline::before {
+/* JOURNEY LAYOUT */
 
-    content: "";
-
-    position: absolute;
-
-    left: 27px;
-
-    top: 0;
-
-    height: 100%;
-
-    width: 1px;
-
-    background: var(--border);
-
-}
-
-
-.timeline-item {
-
-    position: relative;
-
-    padding-left: 80px;
-
-    margin-bottom: 40px;
-
-}
-
-
-.timeline-icon {
-
-    position: absolute;
-
-    left: 0;
-
-    top: 0;
-
-    width: 55px;
-
-    height: 55px;
-
-    background: #1a251c;
-
-    border: 1px solid var(--green);
-
-    border-radius: 50%;
-
+.journey-wrapper {
     display: grid;
-
-    place-items: center;
-
-    color: var(--green);
-
-    z-index: 2;
-
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 60px;
 }
 
 
-.timeline-content {
+/* CATEGORY HEADING */
 
-    background: var(--card);
+.category-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
 
-    border: 1px solid var(--border);
+.category-heading i {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(95, 124, 255, 0.12);
+    color: #5d7cff;
+    border-radius: 12px;
+    font-size: 18px;
+}
 
-    padding: 25px;
-
-    border-radius: 10px;
-
+.category-heading h3 {
+    font-size: 22px;
+    color: var(--text-color);
 }
 
 
-.timeline-date {
+/* JOURNEY CARD */
 
-    color: var(--green);
+.journey-card {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    padding: 25px 22px;
+    margin-bottom: 22px;
 
-    font-size: 11px;
-
-    font-weight: 700;
-
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    transition: all 0.35s ease;
 }
 
 
-.timeline-content h3 {
+/* CARD HOVER */
+
+.journey-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #4a6af8;
+    border-bottom: 1px solid #4a6af8 ;
+    box-shadow: 4 10px 30px rgba(61, 88, 209, 0.12);
+}
+
+
+/* ICON */
+
+.journey-marker {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(95, 124, 255, 0.13);
+
+    color: #5d7cff;
+
+    border-radius: 11px;
 
     font-size: 18px;
-
-    margin-top: 12px;
-
 }
 
 
-.timeline-content h4 {
+/* CONTENT */
 
-    color: var(--text);
+.journey-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.journey-date {
+    display: inline-block;
+
+    color: var(--accent-color);
 
     font-size: 12px;
 
-    margin-top: 8px;
+    font-weight: 700;
 
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
 }
 
+.journey-content h3 {
+     color: var(--text-color);
 
-.timeline-content p {
+    font-size: 16px;
 
-    color: var(--text);
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+.journey-content h4 {
+    color: var(--accent-color);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
+}
+
+.journey-content p {
+     color: var(--text-muted);
 
     font-size: 13px;
 
     line-height: 1.8;
+}
 
-    margin-top: 15px;
+
+/* STATUS BADGES */
+
+.journey-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    padding: 7px 13px;
+
+    background: rgba(95, 124, 255, 0.12);
+
+    color: #6d8cff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    border-radius: 30px;
+}
+
+.journey-badge.ongoing {
+    background: rgba(255, 190, 70, 0.1);
+
+    color: #f0b84d;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+
+    .journey-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
 }
+
+
+@media(max-width: 550px) {
+
+    .experience {
+        padding: 70px 0;
+    }
+
+    .journey-card {
+        padding: 20px 15px;
+        gap: 13px;
+    }
+
+    .journey-content h3 {
+        font-size: 14px;
+    }
+
+    .journey-content p {
+        font-size: 12px;
+    }
+
+    .category-heading h3 {
+        font-size: 19px;
+    }
+
+}
+
 
 
 /* ===================================
